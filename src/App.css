@@ -1,38 +1,104 @@
+
 .App {
-  text-align: center;
+	text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Styling universal selector */
+* {
+	margin: 0;
+	margin-top: 10px;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Style body element */
+body {
+	min-height: 50vh;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	background: hsl(0, 0%, 100%);
+	font-family: "Poppins", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Styling card container */
+.card {
+	height: fit-content;
+	min-width: 33rem;
+	max-width: 40rem;
+	background: rgba(102, 51, 153, 1); /* Dark purple for background */
+	margin: 0 1rem;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	width: 100%;
+	color: white; /* Ensure text is readable on dark background */
 }
 
-.App-link {
-  color: #61dafb;
+.head {
+	position: relative;
+	max-height: fit-content;
+	min-width: 33rem;
+	width: 100%;
+	background: rgb(123, 104, 238); /* Medium purple for header background */
+	padding: 1rem;
+	color: white; /* Ensure text is readable on dark background */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Input box and button */
+.add {
+	padding: 5%;
+	text-align: left;
+	padding-left: 6%;
+}
+
+input {
+	margin-right: 1%;
+}
+
+#title {
+	width: 20%;
+	font-size: larger;
+	background-color: #f0f0f0; /* Light background for inputs */
+	color: #663399; /* Dark purple text for inputs */
+}
+
+#description {
+	font-size: large;
+	width: 60%;
+	background-color: #f0f0f0; /* Light background for inputs */
+	color: #663399; /* Dark purple text for inputs */
+}
+
+button {
+	border-radius: 5px;
+	padding: 5px;
+	font-size: large;
+	color: white;
+	background-color: rgb(138, 43, 226); /* Bright purple for button background */
+}
+
+/* style accordion */
+.notes {
+	margin: 5%;
+	text-align: left;
+}
+
+/* style for accordion items */
+.notes-item {
+	display: flex;
+	z-index: 100;
+	padding: 2%;
+	font-size: larger;
+	margin: 2%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	background-color: rgb(153, 102, 204); /* Medium purple for accordion items */
+	color: white; /* Ensure text is readable on dark background */
+}
+
+/* style for accordion items */
+.accordion-item {
+	border-bottom: 1px solid #ddd;
+	font-size: larger;
+	background-color: rgb(102, 51, 153); /* Dark purple for accordion item background */
+	color: white; /* Ensure text is readable on dark background */
 }
